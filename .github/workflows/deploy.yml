@@ -25,6 +25,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18  # Use a compatible Node.js version
       # Runs a single command using the runners shell
       - name: Install dependencies
         run: npm install
@@ -32,6 +36,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+        
       - name: Deploy to Vercel
         run: vercel --prod --yes --token=${{ secrets.VERCEL_TOKEN }}
 
