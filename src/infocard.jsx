@@ -34,7 +34,7 @@ const WeatherInfoCard = () => {
                         temp: data.main.temp + "°C",
                         description: data.weather[0].description,
                         humidity: data.main.humidity + "%",
-                        windSpeed: data.wind.speed + " km/h",
+                        windSpeed: data.wind.speed + " m/s",
                         pressure: data.main.pressure + " hPa",
                         visibility: (data.visibility / 1000).toFixed(1) + " km",
                     }));
