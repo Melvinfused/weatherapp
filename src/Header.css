@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+.header {
+    background: #151515; /* Grey background */
+    color: white; /* White text */
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1cm; /* Set height to 1cm */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40cm;
+    z-index: 9999; /* Ensure it's on top */
+    font-family: 'Doto', sans-serif; /* Apply Doto font */
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+  
+  .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 20px;
+  }
+  
+  .nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Notification bar styling */
+.notification-bar {
+  position: absolute;
+  top: 0;
+  left: 100px;
+  width: 69%;
+  height: 27.6px;
+  background-color: #021310;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Scrolling animation for the notification bar */
+.notification-bar p {
+  animation: scroll 10s linear infinite;
+  white-space: nowrap;
+  margin: 0;
+  padding-left: 100%;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
