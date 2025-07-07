@@ -13,7 +13,7 @@ const WeatherInfoCard = () => {
         visibility: "--"
     });
     
-    const API_KEY = "a62d44e0f5f20c1ba7e454ec6350baf8";
+    const API_KEY = import.meta.env.VITE_API_KEY;
     const AQI_API_KEY = "YOUR_WAQI_API_KEY";
 
     useEffect(() => {
