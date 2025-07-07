@@ -15,6 +15,7 @@ const WeatherInfoCard = () => {
     
     const API_KEY = import.meta.env.VITE_API_KEY;
     const AQI_API_KEY = "YOUR_WAQI_API_KEY";
+    console.log('API KEY:', import.meta.env.VITE_API_KEY);
 
     useEffect(() => {
         if (!location) return;
