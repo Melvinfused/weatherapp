@@ -56,7 +56,8 @@ const WeatherInfoCard = () => {
                     setWeather(prev => ({
                         ...prev,
                         aqi: "AQI "+ data.data.aqi,
-                        noiseLevel: "-- dB" // Placeholder
+                        noiseLevel: "-- dB", // Placeholder
+                        test: API_KEY
                     }));
                 }
             } catch (error) {
