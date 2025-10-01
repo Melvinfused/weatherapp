@@ -100,5 +100,12 @@
     .about-footer {
       font-size: 12px;
     }
+
+    /* Add this to your CSS for the flashing effect */
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
   }
   
