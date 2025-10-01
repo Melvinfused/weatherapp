@@ -1,4 +1,7 @@
 /* aboutcard.css */
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Jacquard+24&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&family=Pirata+One&family=Fredericka+the+Great&family=Special+Elite&family=UnifrakturCook&family=Oswald&family=Share+Tech+Mono&family=Orbitron&family=Press+Start+2P&family=Roboto+Mono&family=Doto&family=Jacquard+24&family=Metal+Mania&family=Cinzel&family=Unica+One&family=Monoton&display=swap');
+
 
 /* Overlay covering full screen */
 .about-overlay {
@@ -11,7 +14,7 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.5);
-    font-family: "Doto Sans", sans-serif;
+    font-family: "Doto", sans-serif;
     z-index: 1;
     padding: 1rem; /* space around card */
     box-sizing: border-box;
@@ -35,8 +38,29 @@
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 20px;
+    font-family: 'MedievalSharp', cursive; /* initial font */
+    animation: fontCycle 1.0s infinite alternate; /* cycle through fonts */
   }
-  
+  /* Keyframes to cycle through fonts */
+  @keyframes fontCycle {
+    0%   { font-family: 'MedievalSharp', cursive; }
+    7%   { font-family: 'Pirata One', cursive; }
+    14%  { font-family: 'Fredericka the Great', cursive; }
+    21%  { font-family: 'Special Elite', cursive; }
+    28%  { font-family: 'UnifrakturCook', cursive; }
+    35%  { font-family: 'Oswald', sans-serif; }
+    42%  { font-family: 'Share Tech Mono', monospace; }
+    49%  { font-family: 'Orbitron', sans-serif; }
+    56%  { font-family: 'Press Start 2P', cursive; }
+    63%  { font-family: 'Roboto Mono', monospace; }
+    70%  { font-family: 'Jacquard 24', system-ui; }
+    77%  { font-family: 'Metal Mania', cursive; }
+    84%  { font-family: 'Cinzel', serif; }
+    90%  { font-family: 'Doto', sans-serif; } /* pause here */
+    94%  { font-family: 'Doto', sans-serif; } /* extra moment at Doto */
+    100% { font-family: 'MedievalSharp', cursive; }
+  }
+
   /* Paragraph text */
   .about-paragraph {
     font-size: 16px;
