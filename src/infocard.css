@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap'); 
+/* Overlay covering full screen */ 
+.weather-overlay 
+{ position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    font-family: "Doto", sans-serif; 
+    z-index: 1; 
+    padding: 1rem; /* ensures space around card */ 
+    box-sizing: border-box; }
+  
+/* The card container */
+.weather-card {
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+  
+/* Header section */
+.weather-header {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Container for temp + climate for responsive layout */
+.temp-climate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.temperature {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.climate {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+/* Location input */
+.location-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.location-dot {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.location-input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background: #222;
+    color: white;
+    width: 180px;
+    text-align: center;
+}
+
+/* Table of weather info */
+.weather-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.weather-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.weather-cell {
+    padding: 12px;
+    border-radius: 8px;
+    background: rgba(110, 110, 110, 0.43);
+    color: #fff;
+    text-align: center;
+    min-width: 140px;
+    font-weight: bold;
+}
+.climate::before {
+    content: "| ";
+  }
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .weather-overlay {
+        padding: 1.5rem; /* keeps space around card */
+    }
+
+    .weather-card {
+        width: 90%;
+        max-width: 320px; /* reduce size */
+        padding: 18px;
+    }
+
+    /* Stack temperature + climate vertically on mobile */
+    .temp-climate {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .temperature {
+        font-size: 22px;
+    }
+
+    .climate {
+        font-size: 16px;
+        margin-left: 0;
+    }
+
+    .weather-cell {
+        min-width: 100px;
+        padding: 8px;
+        font-size: 14px; /* smaller text for mobile */
+    }
+
+    .location-input {
+        width: 120px; /* smaller input */
+    }
+
+    /* Mobile screens: remove the "|" */
+@media (max-width: 768px) {
+    .climate::before {
+      content: "";
+    }
+  }
+}

@@ -1,1 +1,71 @@
 
+/* Reset + global */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Doto Sans", sans-serif;
+  }
+  
+  .App {
+    position: relative;
+    min-height: 100vh; /* This is crucial for .content's vertical centering */
+    overflow: hidden;
+  }
+  
+  /* Background world map */
+  .glowing-world-map {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure it always fills */
+    z-index: -1;
+  }
+  
+  /* Default desktop: full map is visible */
+  .glowing-world-map img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+/* Content wrapper */
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    min-height: 100vh; /* Fill viewport */
+    padding: 2rem;
+    z-index: 1;
+  }
+  
+  /* Make WeatherInfoCard & AboutCard centred and responsive */
+  .weather-info-card,
+  .about-card {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent over bg */
+    color: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    text-align: center;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .glowing-world-map {
+      object-position: center center; /* Show only centre of world map */
+      background-size: cover;
+    }
+  
+    .weather-info-card,
+    .about-card {
+      padding: 1.5rem;
+      max-width: 95%;
+    }
+  }
+  

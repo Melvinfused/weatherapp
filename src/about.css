@@ -1,0 +1,80 @@
+/* aboutcard.css */
+
+/* Overlay covering full screen */
+.about-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Doto Sans", sans-serif;
+    z-index: 1;
+    padding: 1rem; /* space around card */
+    box-sizing: border-box;
+  }
+  
+  /* Card container */
+  .about-card {
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  /* Header */
+  .about-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Paragraph text */
+  .about-paragraph {
+    font-size: 16px;
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  /* Footer */
+  .about-footer {
+    font-size: 14px;
+    color: cyan;
+    margin-top: 20px;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .about-overlay {
+      padding: 1.5rem; /* space around card */
+    }
+  
+    .about-card {
+      width: 90%;
+      max-width: 320px; /* smaller card */
+      padding: 20px;
+    }
+  
+    .about-header {
+      font-size: 18px;
+    }
+  
+    .about-paragraph {
+      font-size: 14px;
+    }
+  
+    .about-footer {
+      font-size: 12px;
+    }
+  }
+  

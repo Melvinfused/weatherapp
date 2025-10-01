@@ -1,4 +1,6 @@
 import * as React from "react"
+import "./bg.css";
+
 function SvgComponent(props) {
   return (
     <svg

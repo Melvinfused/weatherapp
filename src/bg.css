@@ -1,18 +1,69 @@
 /* Optional: Make sure the canvas takes up the full screen */
+/* bg1.css */
+
+/* Reset body and root */
 body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Doto Sans", sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Full-screen container for the background */
+.glowing-world-map {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* cover whole area */
+  z-index: -1; /* behind content */
+}
+
+/* If GlowingWorldMap is a div with background image instead of img */
+.glowing-world-map-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('path-to-your-world-map.png'); /* replace with your asset */
+  background-size: cover; /* fill entire screen */
+  background-position: center; /* centre of map is visible */
+  z-index: -1;
+}
+
+/* Content wrapper to centre cards */
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* full viewport height */
+  width: 100%;
+  z-index: 1; /* above background */
+  padding: 2rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .glowing-world-map,
+  .glowing-world-map-div {
+    object-position: center center; /* focus on centre of map */
+    background-position: center center; /* if using div background */
   }
-  
-  #root {
-    width: 100%;
-    height: 100%;
+
+  .content {
+    padding: 1rem;
   }
-  
-  div {
-    width: 100%;
-    height: 100%;
-  }
-  
+}
